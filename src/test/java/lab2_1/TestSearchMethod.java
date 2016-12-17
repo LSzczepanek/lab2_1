@@ -10,7 +10,7 @@ public class TestSearchMethod {
 
 	
 	@Test
-	public void testIsElementFoundInSequence(){
+	public void testIsElementFoundInSingleSequence(){
 		int key = 4;
 		int[] seq = {4};
 		
