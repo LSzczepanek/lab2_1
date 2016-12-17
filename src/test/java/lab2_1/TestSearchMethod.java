@@ -48,4 +48,13 @@ public class TestSearchMethod {
 		assertEquals(1, BinarySearch.search(key, seq).getPosition());
 	}
 	
+	
+	@Test
+	public void testIsElementFoundInLongerSequence(){
+		int key = 4;
+		int[] seq = {4,5,6,7};
+		
+		assertTrue(BinarySearch.search(key, seq).isFound());
+	}
+	
 }
