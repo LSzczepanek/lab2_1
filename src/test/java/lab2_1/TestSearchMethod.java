@@ -28,7 +28,9 @@ public class TestSearchMethod {
 	
 	@Test
 	public void testIsElementFirstElement(){
-		
+		int key = 5;
+		int[] seq = {5,6,7};
+		assertEquals(1, BinarySearch.search(key, seq).getPosition());
 	}
 	
 }
