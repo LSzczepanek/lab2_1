@@ -26,4 +26,9 @@ public class TestSearchMethod {
 		assertFalse(BinarySearch.search(key, seq).isFound());
 	}
 	
+	@Test
+	public void testIsElementFirstElement(){
+		
+	}
+	
 }
