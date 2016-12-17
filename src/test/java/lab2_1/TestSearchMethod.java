@@ -30,7 +30,7 @@ public class TestSearchMethod {
 	public void testIsElementFirstElement(){
 		int key = 5;
 		int[] seq = {5,6,7};
-		assertEquals(1, BinarySearch.search(key, seq).getPosition());
+		assertEquals(0, BinarySearch.search(key, seq).getPosition());
 	}
 	
 	
