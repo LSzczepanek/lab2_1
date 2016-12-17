@@ -41,4 +41,11 @@ public class TestSearchMethod {
 		assertEquals(seq.length-1, BinarySearch.search(key, seq).getPosition());
 	}
 	
+	@Test
+	public void testIsElementMiddleElement(){
+		int key = 6;
+		int[] seq = {5,6,7};
+		assertEquals(1, BinarySearch.search(key, seq).getPosition());
+	}
+	
 }
