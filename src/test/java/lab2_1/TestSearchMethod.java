@@ -130,4 +130,14 @@ public class TestSearchMethod {
 		assertThat(result.isFound(), is(false));
 		assertThat(result.getPosition(), is(equalTo(-1)));
 	}
+	
+	@Test
+	public void testWhenInSeqIsOverfullValue(){
+		int key = 5;
+		int[] seq = {4,5,6,7, Integer.MAX_VALUE+1};
+		SearchResult result = BinarySearch.search(key, seq);
+
+		assertThat(result.isFound(), is(true));
+		assertThat(seq[result.getPosition()], is(equalTo(key)));
+	}
 }
