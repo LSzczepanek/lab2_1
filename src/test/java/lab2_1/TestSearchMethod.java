@@ -120,4 +120,14 @@ public class TestSearchMethod {
 		assertThat(result.isFound(), is(false));
 		assertThat(result.getPosition(), is(equalTo(-1)));
 	}
+	
+	@Test
+	public void testWhenKeyValueIsOverfull(){
+		int key = Integer.MAX_VALUE + 1;
+		int[] seq = {4,5,6,7};
+		SearchResult result = BinarySearch.search(key, seq);
+
+		assertThat(result.isFound(), is(false));
+		assertThat(result.getPosition(), is(equalTo(-1)));
+	}
 }
