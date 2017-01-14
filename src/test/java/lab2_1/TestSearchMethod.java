@@ -18,7 +18,7 @@ public class TestSearchMethod {
 		SearchResult result = BinarySearch.search(key, seq);
 
 		assertThat(result.isFound(), is(true));
-		assertThat(seq[result.getPosition()], is(equalTo(key)));
+		assertThat(seq[result.getPosition()-1], is(equalTo(key)));
 	}
 
 	@Test
@@ -37,7 +37,7 @@ public class TestSearchMethod {
 		int[] seq = { 5, 6, 7 };
 		SearchResult result = BinarySearch.search(key, seq);
 
-		assertThat(result.getPosition(), is(equalTo(0)));
+		assertThat(result.getPosition()-1, is(equalTo(0)));
 	}
 
 	@Test
@@ -46,7 +46,7 @@ public class TestSearchMethod {
 		int[] seq = { 5, 6, 7 };
 		SearchResult result = BinarySearch.search(key, seq);
 
-		assertThat(result.getPosition(), is(equalTo(seq.length - 1)));
+		assertThat(result.getPosition()-1, is(equalTo(seq.length - 1)));
 	}
 
 	@Test
@@ -55,7 +55,7 @@ public class TestSearchMethod {
 		int[] seq = { 5, 6, 7 };
 		SearchResult result = BinarySearch.search(key, seq);
 
-		assertThat(result.getPosition(), is(equalTo(1)));
+		assertThat(result.getPosition()-1, is(equalTo(1)));
 	}
 
 	@Test
@@ -65,7 +65,7 @@ public class TestSearchMethod {
 		SearchResult result = BinarySearch.search(key, seq);
 
 		assertThat(result.isFound(), is(true));
-		assertThat(seq[result.getPosition()], is(equalTo(key)));
+		assertThat(seq[result.getPosition()-1], is(equalTo(key)));
 	}
 
 	@Test
@@ -94,7 +94,7 @@ public class TestSearchMethod {
 		SearchResult result = BinarySearch.search(key, seq);
 
 		assertThat(result.isFound(), is(true));
-		assertThat(seq[result.getPosition()], is(equalTo(key)));
+		assertThat(seq[result.getPosition()-1], is(equalTo(key)));
 	}
 
 	@Test
@@ -104,7 +104,7 @@ public class TestSearchMethod {
 		SearchResult result = BinarySearch.search(key, seq);
 
 		assertThat(result.isFound(), is(true));
-		assertThat(seq[result.getPosition()], is(equalTo(key)));
+		assertThat(seq[result.getPosition()-1], is(equalTo(key)));
 	}
 
 	@Test
@@ -114,7 +114,7 @@ public class TestSearchMethod {
 		SearchResult result = BinarySearch.search(key, seq);
 
 		assertThat(result.isFound(), is(true));
-		assertThat(seq[result.getPosition()], is(equalTo(key)));
+		assertThat(seq[result.getPosition()-1], is(equalTo(key)));
 	}
 
 	@Test
@@ -153,6 +153,6 @@ public class TestSearchMethod {
 		SearchResult result = BinarySearch.search(key, seq);
 
 		assertThat(result.isFound(), is(true));
-		assertThat(seq[result.getPosition()], is(equalTo(key)));
+		assertThat(seq[result.getPosition()-1], is(equalTo(key)));
 	}
 }
