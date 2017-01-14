@@ -24,8 +24,9 @@ public class TestSearchMethod {
 	public void testElementNotExistInSingleSequence(){
 		int key = 7;
 		int[] seq = {4};
+		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertFalse(BinarySearch.search(key, seq).isFound());
+		assertTrue((result.isFound() == false) && result.getPosition() == -1);
 	}
 	
 	@Test
