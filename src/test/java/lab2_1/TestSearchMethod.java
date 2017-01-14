@@ -91,6 +91,15 @@ public class TestSearchMethod {
 		assertThat(seq[result.getPosition()], is(equalTo(key)));
 	}
 	
-	
+	@Test
+	public void testWhenKeyIsNegative(){
+		int key = -5;
+		int[] seq = {4,-5,6,7};
+
+		SearchResult result = BinarySearch.search(key, seq);
+
+		assertThat(result.isFound(), is(true));
+		assertThat(seq[result.getPosition()], is(equalTo(key)));
+	}
 	
 }
