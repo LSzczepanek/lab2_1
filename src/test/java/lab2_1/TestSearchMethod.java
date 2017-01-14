@@ -1,6 +1,8 @@
 package lab2_1;
 
 import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.Test;
 
@@ -16,7 +18,8 @@ public class TestSearchMethod {
 		int[] seq = {4};
 		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertTrue(result.isFound() && (seq[result.getPosition()] == key));
+		assertThat(result.isFound(), is(true));
+		assertThat(seq[result.getPosition()], is(equalTo(key)));
 	}
 	
 	
