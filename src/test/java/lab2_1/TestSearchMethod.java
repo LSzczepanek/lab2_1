@@ -39,7 +39,7 @@ public class TestSearchMethod {
 		int[] seq = {5,6,7};
 		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertEquals(0, result.getPosition());
+		assertThat(result.getPosition(), is(equalTo(0)));
 	}
 	
 	
@@ -49,7 +49,7 @@ public class TestSearchMethod {
 		int[] seq = {5,6,7};
 		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertEquals(seq.length-1, result.getPosition());
+		assertThat(result.getPosition(), is(equalTo(seq.length-1)));
 	}
 	
 	@Test
@@ -58,7 +58,7 @@ public class TestSearchMethod {
 		int[] seq = {5,6,7};
 		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertEquals(1, result.getPosition());
+		assertThat(result.getPosition(), is(equalTo(1)));
 	}
 	
 	
