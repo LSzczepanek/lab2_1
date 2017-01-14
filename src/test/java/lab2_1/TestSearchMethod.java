@@ -80,6 +80,17 @@ public class TestSearchMethod {
 		BinarySearch.search(key, seq);
 	}
 	
+	@Test
+	public void testWhenKeyValueIsZero(){
+		int key = 0;
+		int[] seq = {0,5,6,7};
+
+		SearchResult result = BinarySearch.search(key, seq);
+
+		assertThat(result.isFound(), is(true));
+		assertThat(seq[result.getPosition()], is(equalTo(key)));
+	}
+	
 	
 	
 }
