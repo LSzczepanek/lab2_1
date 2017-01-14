@@ -72,4 +72,14 @@ public class TestSearchMethod {
 		assertThat(seq[result.getPosition()], is(equalTo(key)));
 	}
 	
+	@Test(expected = IllegalArgumentException.class)
+	public void testWhenSequenceIsEmpty(){
+		int key = 4;
+		int[] seq = {};
+
+		BinarySearch.search(key, seq);
+	}
+	
+	
+	
 }
