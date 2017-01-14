@@ -29,7 +29,8 @@ public class TestSearchMethod {
 		int[] seq = {4};
 		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertTrue((result.isFound() == false) && result.getPosition() == -1);
+		assertThat(result.isFound(), is(false));
+		assertThat(result.getPosition(), is(equalTo(-1)));
 	}
 	
 	@Test
