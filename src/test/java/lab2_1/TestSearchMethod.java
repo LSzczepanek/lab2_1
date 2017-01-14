@@ -33,7 +33,9 @@ public class TestSearchMethod {
 	public void testElementIsFirstInSequence(){
 		int key = 5;
 		int[] seq = {5,6,7};
-		assertEquals(0, BinarySearch.search(key, seq).getPosition());
+		SearchResult result = BinarySearch.search(key, seq);
+		
+		assertEquals(0, result.getPosition());
 	}
 	
 	
