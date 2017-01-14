@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import edu.iis.mto.bsearch.BinarySearch;
+import edu.iis.mto.bsearch.SearchResult;
 
 public class TestSearchMethod {
 
@@ -13,8 +14,9 @@ public class TestSearchMethod {
 	public void testElementExistInSingleSequence(){
 		int key = 4;
 		int[] seq = {4};
+		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertTrue(BinarySearch.search(key, seq).isFound());
+		assertTrue(result.isFound() && (seq[result.getPosition()] == key));
 	}
 	
 	
