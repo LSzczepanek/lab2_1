@@ -110,4 +110,14 @@ public class TestSearchMethod {
 		assertThat(result.isFound(), is(true));
 		assertThat(seq[result.getPosition()], is(equalTo(key)));
 	}
+	
+	@Test
+	public void testWhenThereIsNoSequence(){
+		int key = 3;
+		int[] seq = {1,7,3,2,12};
+		SearchResult result = BinarySearch.search(key, seq);
+
+		assertThat(result.isFound(), is(false));
+		assertThat(result.getPosition(), is(equalTo(-1)));
+	}
 }
