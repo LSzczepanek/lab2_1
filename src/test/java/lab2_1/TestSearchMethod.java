@@ -127,6 +127,15 @@ public class TestSearchMethod {
 		assertThat(result.getPosition(), is(equalTo(-1)));
 	}
 
+	public void testWhenLoweringSequence() {
+		int key = 3;
+		int[] seq = { 7, 6, 5, 4, 3 };
+		SearchResult result = BinarySearch.search(key, seq);
+
+		assertThat(result.isFound(), is(false));
+		assertThat(result.getPosition(), is(equalTo(-1)));
+	}
+
 	@Test
 	public void testWhenKeyValueIsOverfull() {
 		int key = Integer.MAX_VALUE + 1;
