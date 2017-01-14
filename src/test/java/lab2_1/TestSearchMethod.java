@@ -43,14 +43,18 @@ public class TestSearchMethod {
 	public void testElementIsLastInSequence(){
 		int key = 7;
 		int[] seq = {5,6,7};
-		assertEquals(seq.length-1, BinarySearch.search(key, seq).getPosition());
+		SearchResult result = BinarySearch.search(key, seq);
+		
+		assertEquals(seq.length-1, result.getPosition());
 	}
 	
 	@Test
 	public void testElementIsMiddleInSequence(){
 		int key = 6;
 		int[] seq = {5,6,7};
-		assertEquals(1, BinarySearch.search(key, seq).getPosition());
+		SearchResult result = BinarySearch.search(key, seq);
+		
+		assertEquals(1, result.getPosition());
 	}
 	
 	
@@ -58,8 +62,9 @@ public class TestSearchMethod {
 	public void testElemenetExistInLongerSequence(){
 		int key = 4;
 		int[] seq = {4,5,6,7};
+		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertTrue(BinarySearch.search(key, seq).isFound());
+		assertTrue(result.isFound());
 	}
 	
 }
