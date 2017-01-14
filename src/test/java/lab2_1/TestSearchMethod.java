@@ -68,7 +68,8 @@ public class TestSearchMethod {
 		int[] seq = {4,5,6,7};
 		SearchResult result = BinarySearch.search(key, seq);
 		
-		assertTrue(result.isFound() && (seq[result.getPosition()] == key));
+		assertThat(result.isFound(), is(true));
+		assertThat(seq[result.getPosition()], is(equalTo(key)));
 	}
 	
 }
